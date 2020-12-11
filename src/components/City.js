@@ -2,15 +2,21 @@ import React from "react";
 
 export default function City(props){
     const towns = props.towns;
+    // const [currentCity, setCurrentCity] = React.useState("");
+    // const [towns, setTowns] = React.useState();
 
+    // const displayTowns = (e, city) => {
+    //     setCurrentCity(e.target.innerText);
+    //     setTowns(city.towns);
+    // }
 
     return (
         <div className={"towns"}>
-        {towns.map((town, index) => {
+        {towns ? towns.map((town, index) => {
             return <div id={`town${index+1}`} key={`town${index+1}`}>
-            {town.name}
+            <li>{town.name}</li>
           </div>
-        })}
+        }):null}
         </div>
     )
 }
