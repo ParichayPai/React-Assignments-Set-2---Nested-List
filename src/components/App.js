@@ -1,6 +1,6 @@
 import React, { Component, useState } from "react";
 import "./../styles/App.css";
-import NestedList from "./NestedList";
+import States from "./States";
 
 // Do not alter the states const and values inside it.
 const states = [
@@ -157,7 +157,7 @@ const states = [
 
 function App() {
   return <div id="main">
-    <NestedList states={states} />
+    <States states={states} />
   </div>;
 }
 
