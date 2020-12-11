@@ -7,11 +7,8 @@ export default function State(props){
     const [towns, setTowns] = React.useState();
 
     const displayTowns = (e, city) => {
-        // if(e.target.innerText === city.name){
-        // }  
         setCurrentCity(e.target.innerText);
         setTowns(city.towns);
-
     }
 
     return (
