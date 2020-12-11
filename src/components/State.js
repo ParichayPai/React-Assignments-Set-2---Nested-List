@@ -15,13 +15,13 @@ export default function State(props){
     }
 
     return (
-        <div >
+        <>
         {cities ? cities.map((city, index) => {
             return <div onClick={(e) => displayTowns(e, city)} id={`city${index+1}`} key={`city${index+1}`}>
             <li>{city.name}</li>
             <ol>{towns ? <City towns={city.name === currentCity ? city.towns: null}/> : null}</ol>
           </div>
         }) : null}
-        </div>
+        </>
     )
 }

@@ -13,13 +13,13 @@ export default function NestedList(props) {
   };
 
   return (
-    <div>
+    <>
       {states.map((state, index) => {
         return <div onClick={(e) => displayCities(e, state)} id={`state${index+1}`} key={state.name} >
           {state.name}
           {cities ? <State cities={state.name === currentState ? state.cities: null}/> : null}
         </div>;
       })}
-    </div>
+    </>
   );
 }

@@ -11,12 +11,12 @@ export default function City(props){
     // }
 
     return (
-        <div className={"towns"}>
+        <>
         {towns ? towns.map((town, index) => {
             return <div id={`town${index+1}`} key={`town${index+1}`}>
             <li>{town.name}</li>
           </div>
         }):null}
-        </div>
+        </>
     )
 }
