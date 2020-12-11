@@ -13,7 +13,7 @@ export default function City(props){
     return (
         <>
         {towns ? towns.map((town, index) => {
-            return <div id={`town${index+1}`} key={`town${index+1}`}>
+            return <div id={`town${index+1}`}>
             <li>{town.name}</li>
           </div>
         }):null}
